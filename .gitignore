@@ -1,0 +1,26 @@
+# Air (Go live-reload temporary build folder)
+/tmp/
+
+# Environment Variables & Secrets (Sangat Penting!)
+.env
+.env.local
+*.env
+
+# Binary / Executable Output (Hasil build Go)
+/*.exe
+/*.exe~
+/*.dll
+/*.so
+/*.dylib
+/main
+/app
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Vercel / Deployment Temporary Files
+.vercel/
