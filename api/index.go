@@ -112,7 +112,6 @@ func generateRandomPassword(length int) (string, error) {
 
 	return string(result), nil
 }
-
 // Global Router Gin
 var app *gin.Engine
 
