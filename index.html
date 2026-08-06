@@ -187,10 +187,8 @@
         }
 
         return (
-          /* Container Utama Fleksibel (Mengecil di HP, Melebar di Laptop) */
           <div className="w-full max-w-full md:max-w-3xl lg:max-w-5xl mx-auto px-4 py-8 sm:py-12 flex flex-col gap-8">
             
-            {/* Header / Navbar */}
             <header className="flex items-center justify-between border-b border-slate-800/80 pb-5">
               <div className="flex items-center gap-3">
                 <div className="h-9 w-9 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 font-bold text-sm shadow-inner">
@@ -206,14 +204,12 @@
                 </div>
               </div>
 
-              {/* Status Indicator */}
               <div className="flex items-center gap-2 text-xs bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-full shadow-sm">
                 <span className={"h-2 w-2 rounded-full " + (status.state === "offline" ? "bg-rose-500 shadow-sm shadow-rose-500" : status.state === "online" ? "bg-emerald-400 shadow-sm shadow-emerald-400" : "bg-amber-400")}></span>
                 <span className="text-slate-300 font-medium">{status.label}</span>
               </div>
             </header>
 
-            {/* Title Section */}
             <section className="space-y-3 text-center">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
                 Deteksi Kebocoran Password Anda
@@ -223,10 +219,8 @@
               </p>
             </section>
 
-            {/* Main Card Wrapper (Melebar mengikuti container) */}
             <div className="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-6 sm:p-8 md:p-10 backdrop-blur-xl shadow-2xl space-y-6">
               
-              {/* Main Form */}
               <form onSubmit={handleCheck} className="flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
                   <div className="flex justify-between items-center text-xs sm:text-sm">
@@ -278,7 +272,6 @@
                   )}
                 </button>
 
-                {/* Privacy Guarantee Banner */}
                 <div className="flex items-center justify-center gap-2 text-xs text-slate-400 bg-slate-950/40 border border-slate-800/50 px-4 py-2.5 rounded-xl">
                   <span>🔒</span>
                   <span><strong>Privasi Terjamin:</strong> Password asli Anda tidak pernah dikirimkan ke internet (Menggunakan metode k-Anonymity).</span>
@@ -291,7 +284,6 @@
                 )}
               </form>
 
-              {/* Result Area */}
               {response && (
                 <div className={"border rounded-xl p-6 transition-all space-y-5 text-center " + (response.is_pwned ? "bg-rose-500/10 border-rose-500/30 text-rose-200" : "bg-emerald-500/10 border-emerald-500/30 text-emerald-200")}>
                   <div className={"mx-auto flex h-14 w-14 items-center justify-center rounded-2xl text-3xl " + (response.is_pwned ? "bg-rose-500/20 text-rose-400" : "bg-emerald-500/20 text-emerald-400")}>
@@ -326,7 +318,6 @@
                 </div>
               )}
 
-              {/* Technical Details Accordion */}
               {response && (
                 <div className="pt-2 text-center border-t border-slate-800/80">
                   <button
@@ -354,7 +345,6 @@
               )}
             </div>
 
-            {/* Footer */}
             <footer className="text-center text-xs text-slate-500 space-y-1">
               <p>SentinelPass &copy; 2026 — Built with Go & React</p>
               <p className="text-[11px] text-slate-600">Powered by Have I Been Pwned API</p>
